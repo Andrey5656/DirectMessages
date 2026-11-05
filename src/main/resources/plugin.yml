@@ -1,0 +1,25 @@
+name: DirectMessages
+version: '${project.version}'
+main: com.andrey.directmessages.DirectMessages
+api-version: '1.21.7'
+folia-supported: true
+author: Andrey
+description: Private messages with custom formats, sounds, an action bar, ignore and social spy.
+softdepend:
+  - PlaceholderAPI
+libraries:
+  - org.jetbrains.kotlin:kotlin-stdlib:2.3.21
+  - com.zaxxer:HikariCP:5.1.0
+  - org.xerial:sqlite-jdbc:3.53.2.1
+  - com.mysql:mysql-connector-j:9.7.0
+
+permissions:
+  directmessages.socialspy:
+    description: Use /socialspy to see other players' private messages.
+    default: op
+  directmessages.cooldown.bypass:
+    description: Send private messages without the cooldown.
+    default: op
+  directmessages.reload:
+    description: Reload the config with /directmessages reload.
+    default: op

@@ -1,0 +1,66 @@
+name: "%vault_prefix%{name}"
+
+formats:
+  sent: "&#C77DFFTo &f{receiver}&7: &f{message}"
+  received: "&#C77DFFFrom &f{sender}&7: &f{message}"
+  spy: "&8[&#C77DFFSpy&8] &7{sender} &8→ &7{receiver}&8: &7{message}"
+  action-bar: "&#C77DFF✉ &fNew message from {sender}"
+
+hover:
+  lines:
+    - "&f{name}"
+    - "&7------------"
+    - "&#00FF11$ &fMoney: &#00FF11%vault_eco_balance_formatted%"
+    - "&#FF0000🗡 &fKills: &#FF0000%statistic_player_kills%"
+    - "&#FFE400⌚ &fPlaytime: &#FFE400%statistic_time_played%"
+    - "&#FA7600☠ &fDeaths: &#FA7600%statistic_deaths%"
+    - "&7------------"
+    - "&7Click To Message!"
+  click: "/msg {name} "
+
+sounds:
+  sent:
+    sound: entity.experience_orb.pickup
+    volume: 0.6
+    pitch: 1.4
+  received:
+    sound: block.note_block.pling
+    volume: 1.0
+    pitch: 2.0
+  error:
+    sound: entity.villager.no
+    volume: 1.0
+    pitch: 1.0
+
+cooldown: 1.0
+log: true
+
+storage:
+  type: sqlite
+  mysql:
+    host: localhost
+    port: 3306
+    database: minecraft
+    username: root
+    password: ""
+
+messages:
+  msg-usage: "&cUsage: /msg <player> <message>"
+  reply-usage: "&cUsage: /r <message>"
+  not-online: "&c{player} is not online."
+  no-reply: "&cYou have nobody to reply to."
+  self: "&cYou can't message yourself."
+  not-accepting: "&cThat user is not accepting private messages."
+  you-ignore: "&cYou are ignoring {player}."
+  cooldown: "&cWait {seconds}s before sending another message."
+  ignore-on: "&7You now ignore &f{player}&7."
+  ignore-off: "&7You no longer ignore &f{player}&7."
+  ignore-self: "&cYou can't ignore yourself."
+  ignore-list: "&7Ignored players: &f{players}"
+  ignore-empty: "&7You don't ignore anyone."
+  never-joined: "&c{player} has never joined."
+  spy-on: "&aSocial spy on."
+  spy-off: "&cSocial spy off."
+  toggle-on: "&aPrivate messages on."
+  toggle-off: "&cPrivate messages off."
+  reloaded: "&aDirectMessages reloaded."
