@@ -39,8 +39,9 @@ The default config uses these PlaceholderAPI expansions:
 /papi ecloud download Player
 /papi ecloud download Vault
 /papi ecloud download Statistic
-/papi reload
 ```
+
+Then run `/papi reload`.
 
 `%vault_prefix%` in `name` shows the player's rank prefix. It needs Vault and a permissions plugin with prefixes, such
 as LuckPerms. Without PlaceholderAPI, placeholders are shown as typed, so set `name` to `"{name}"` and remove the
